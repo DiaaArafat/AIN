@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="629.0" prefWidth="1214.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ain.AssetsController">
+    <children>
+        <ImageView fitHeight="634.0" fitWidth="1214.0" layoutX="1.0">
+            <image>
+                <Image url="@خلفية-الأسئلة.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="74.0" fitWidth="390.0" layoutX="412.0" layoutY="49.0">
+            <image>
+                <Image url="@لوغو-الزاوية.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="74.0" fitWidth="245.0" layoutX="11.0" layoutY="256.0">
+
+        </ImageView>
+        <ImageView fitHeight="60.0" fitWidth="55.0" layoutX="1135.0" layoutY="19.0">
+            <image>
+                <Image url="@exit_icon-icons.com_48304.png" />
+            </image>
+        </ImageView>
+        <GridPane layoutX="4.0" layoutY="272.0" prefHeight="359.0" prefWidth="1207.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="170.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="329.0" minHeight="10.0" prefHeight="309.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <TableView fx:id="Memtables" prefHeight="322.0" prefWidth="1207.0" GridPane.rowIndex="1">
+                    <columns>
+                        <TableColumn fx:id="IDTransaction" prefWidth="75.0" text="ID">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="stuid" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="NameTransaction" prefWidth="75.0" text="From">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="name" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="ToTransaction" prefWidth="75.0" text="To">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="email" />
+                            </cellValueFactory>
+                        </TableColumn>
+                        <TableColumn fx:id="ValueTransaction" prefWidth="75.0" text="Value">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="phone" />
+                            </cellValueFactory>
+                        </TableColumn>
+                  <TableColumn fx:id="DateTransaction" prefWidth="75.0" text="Date">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="phone" />
+                     </cellValueFactory>
+                  </TableColumn>
+                        <TableColumn fx:id="DetailsTransaction" prefWidth="75.0" text="Details">
+                            <cellValueFactory>
+                                <PropertyValueFactory property="points" />
+                            </cellValueFactory>
+                        </TableColumn>
+                    </columns>
+
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                    </columnResizePolicy>
+                </TableView>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <children>
+                        <TextField fx:id="SearchTransaction" nodeOrientation="LEFT_TO_RIGHT" onAction="#SearchById" prefHeight="27.0" prefWidth="300.0" promptText="Search By ID" styleClass="tf-boxac" stylesheets="@styles.css">
+                            <cursor>
+                                <Cursor fx:constant="CLOSED_HAND" />
+                            </cursor>
+                            <font>
+                                <Font name="Arial Rounded MT Bold" size="14.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="480.0" top="10.0" />
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+            </children>
+        </GridPane>
+        <AnchorPane fx:id="Slider" layoutX="24.0" layoutY="33.0" prefHeight="631.0" prefWidth="118.0" style="-fx-background-color: transpernt;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fitHeight="621.0" fitWidth="214.0" layoutX="16.0" layoutY="6.0">
+                    <image>
+                        <Image url="@sidebar.png" />
+                    </image>
+                </ImageView>
+                <VBox layoutX="-16.0" layoutY="37.0" prefHeight="597.0" prefWidth="118.0" AnchorPane.leftAnchor="65.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Button fx:id="Home" mnemonicParsing="false" onAction="#Home" prefHeight="157.0" prefWidth="144.0" style="-fx-background-color: transpernt;" text="Home" textFill="WHITE">
+                            <VBox.margin>
+                                <Insets top="70.0" />
+                            </VBox.margin>
+                            <font>
+                                <Font name="Arial Rounded MT Bold" size="19.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="Members" mnemonicParsing="false" onAction="#open_Members" prefHeight="157.0" prefWidth="224.0" style="-fx-background-color: transpernt;" text="Members" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Rounded MT Bold" size="18.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="Activity" mnemonicParsing="false" onAction="#open_activites" prefHeight="157.0" prefWidth="196.0" style="-fx-background-color: transpernt;" text="Activities" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Rounded MT Bold" size="18.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="Asets" mnemonicParsing="false" prefHeight="153.0" prefWidth="118.0" style="-fx-background-color: transpernt;" text="Assets" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Rounded MT Bold" size="18.0" />
+                            </font>
+                        </Button>
+                        <Button fx:id="Transaction" mnemonicParsing="false" prefHeight="157.0" prefWidth="230.0" style="-fx-background-color: transpernt;" text="Transaction" textFill="WHITE">
+                            <font>
+                                <Font name="Arial Rounded MT Bold" size="16.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+        <Label layoutX="504.0" layoutY="143.0" text="Transaction" textFill="#f2f2f2">
+            <font>
+                <Font name="Arial Rounded MT Bold" size="40.0" />
+            </font>
+        </Label>
+        <ImageView fitHeight="82.0" fitWidth="78.0" layoutX="1122.0" layoutY="233.0">
+            <image>
+                <Image url="@clipart2867726.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="PrintReportTransaction" layoutX="1120.0" layoutY="228.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="85.0" style="-fx-background-color: transpernt;" stylesheets="@styles.css" text="Print Report">
+            <font>
+                <Font name="Arial Rounded MT Bold" size="1.0" />
+            </font>
+        </Button>
+        <ImageView fitHeight="60.0" fitWidth="70.0" layoutX="90.0" layoutY="30.0">
+            <image>
+                <Image url="@toppng.com-menu-icon-png-3-lines-2000x2000.png" />
+            </image>
+        </ImageView>
+        <Button fx:id="menu" layoutX="29.0" layoutY="15.0" mnemonicParsing="false" prefHeight="96.0" prefWidth="181.0" style="-fx-background-color: transpernt;" />
+        <Button fx:id="menu1" layoutX="27.0" layoutY="19.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="188.0" style="-fx-background-color: transpernt;" />
+        <Button fx:id="exit" layoutX="1119.0" layoutY="19.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="78.0" style="-fx-background-color: transpernt;" />
+        <Button fx:id="ShowwAllDataTransaction" layoutX="-6.0" layoutY="256.0" mnemonicParsing="false" onAction="#getData" prefHeight="60.0" prefWidth="254.0" style="-fx-background-color: transpernt;" stylesheets="@styles.css">
+            <font>
+                <Font name="Arial Rounded MT Bold" size="18.0" />
+            </font>
+        </Button>
+      <ImageView fitHeight="82.0" fitWidth="78.0" layoutX="1018.0" layoutY="231.0">
+         <image>
+            <Image url="@ADD.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="AddTransaction" layoutX="1013.0" layoutY="234.0" mnemonicParsing="false" prefHeight="74.0" prefWidth="85.0" style="-fx-background-color: transpernt;" stylesheets="@styles.css">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="1.0" />
+         </font>
+      </Button>
+    </children>
+</AnchorPane>

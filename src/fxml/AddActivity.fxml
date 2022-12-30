@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="629.0" prefWidth="1214.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ain.ain.AddActivity">
+   <children>
+      <ImageView fitHeight="634.0" fitWidth="1214.0" layoutX="1.0">
+         <image>
+            <Image url="@خلفية-الأسئلة.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="74.0" fitWidth="390.0" layoutX="413.0" layoutY="47.0">
+         <image>
+            <Image url="@لوغو-الزاوية.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="60.0" fitWidth="55.0" layoutX="1135.0" layoutY="19.0">
+         <image>
+            <Image url="@exit_icon-icons.com_48304.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="107.0" fitWidth="384.0" layoutX="432.0" layoutY="502.0">
+         <image>
+            <Image url="@../../../../../../Users/Mohammad%20Omar/Desktop/AddActivity.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="addIDACTV" layoutX="61.0" layoutY="231.0" prefHeight="36.0" prefWidth="223.0" promptText="ID" styleClass="tf-boxac" stylesheets="@styles.css" />
+      <TextField fx:id="addEMAILACTV" layoutX="61.0" layoutY="323.0" prefHeight="36.0" prefWidth="223.0" promptText="MediaId" styleClass="tf-boxac" stylesheets="@styles.css" />
+      <TextField fx:id="addNumberOfSubscribers" layoutX="61.0" layoutY="409.0" prefHeight="36.0" prefWidth="223.0" promptText="Number of Subscribers" styleClass="tf-boxac" stylesheets="@styles.css" />
+      <AnchorPane fx:id="Slider" layoutX="24.0" layoutY="33.0" prefHeight="631.0" prefWidth="118.0" style="-fx-background-color: transpernt;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="621.0" fitWidth="214.0" layoutX="16.0" layoutY="6.0">
+               <image>
+                  <Image url="@sidebar.png" />
+               </image>
+            </ImageView>
+            <VBox layoutX="-16.0" layoutY="37.0" prefHeight="597.0" prefWidth="118.0" AnchorPane.leftAnchor="65.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="Home" mnemonicParsing="false" onAction="#Home" prefHeight="157.0" prefWidth="144.0" style="-fx-background-color: transpernt;" text="Home" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets top="70.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Members" mnemonicParsing="false" onAction="#open_Members" prefHeight="157.0" prefWidth="224.0" style="-fx-background-color: transpernt;" text="Members" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Activity" mnemonicParsing="false" onAction="#open_activites" prefHeight="157.0" prefWidth="196.0" style="-fx-background-color: transpernt;" text="Activities" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Asets" mnemonicParsing="false" prefHeight="153.0" prefWidth="118.0" style="-fx-background-color: transpernt;" text="Assets" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="Transaction" mnemonicParsing="false" prefHeight="157.0" prefWidth="230.0" style="-fx-background-color: transpernt;" text="Transaction" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Rounded MT Bold" size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <Label layoutX="485.0" layoutY="143.0" text="Add Activity" textFill="#f2f2f2">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="40.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="74.0" fitWidth="78.0" layoutX="87.0" layoutY="30.0">
+         <image>
+            <Image url="@toppng.com-menu-icon-png-3-lines-2000x2000.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="menu" layoutX="29.0" layoutY="23.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="181.0" style="-fx-background-color: transpernt;" />
+      <Button fx:id="menu1" layoutX="27.0" layoutY="19.0" mnemonicParsing="false" prefHeight="88.0" prefWidth="188.0" style="-fx-background-color: transpernt;" />
+      <Button fx:id="exit" layoutX="1119.0" layoutY="19.0" mnemonicParsing="false" prefHeight="66.0" prefWidth="78.0" style="-fx-background-color: transpernt;" />
+      <TextField fx:id="addNAMEACTV" layoutX="512.0" layoutY="231.0" prefHeight="36.0" prefWidth="223.0" promptText="Name" styleClass="tf-boxac" stylesheets="@styles.css" />
+      <TextField fx:id="addFee" layoutX="512.0" layoutY="323.0" prefHeight="36.0" prefWidth="223.0" promptText="Fee" styleClass="tf-boxac" stylesheets="@styles.css" />
+      <Button fx:id="ADDACTIVITY" layoutX="434.0" layoutY="495.0" mnemonicParsing="false" onAction="#addActivitey" prefHeight="102.0" prefWidth="374.0" style="-fx-background-color: transspernt;" />
+      <TextField fx:id="addSocietyName" layoutX="934.0" layoutY="231.0" prefHeight="36.0" prefWidth="223.0" promptText="Society Name" styleClass="tf-boxac" stylesheets="@styles.css" />
+      <TextField fx:id="addCost" layoutX="934.0" layoutY="323.0" prefHeight="36.0" prefWidth="223.0" promptText="Cost" styleClass="tf-boxac" stylesheets="@styles.css" />
+      <DatePicker fx:id="addStartDate" layoutX="509.0" layoutY="427.0" prefHeight="25.0" prefWidth="230.0" promptText="Start Date" stylesheets="@styles.css">
+         <effect>
+            <DropShadow />
+         </effect>
+      </DatePicker>
+      <DatePicker fx:id="AddEndDate" layoutX="931.0" layoutY="427.0" prefHeight="25.0" prefWidth="230.0" promptText="End Date" stylesheets="@styles.css">
+         <effect>
+            <DropShadow />
+         </effect>
+      </DatePicker>
+   </children>
+</AnchorPane>
